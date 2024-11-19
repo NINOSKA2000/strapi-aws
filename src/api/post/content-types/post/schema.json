@@ -22,11 +22,78 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "image": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "keyboards": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "maxLength": 200,
+      "unique": false
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "blocks"
+    },
+    "autor": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Menagen Murriagui Hananel"
+    },
+    "autorRole": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Innovativa Seidor CEO"
+    },
+    "type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "AI and automation",
+        "Technology",
+        "Financial services",
+        "Customer service"
+      ]
+    },
+    "imgAutor": {
+      "type": "media",
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -39,6 +106,22 @@
           "localized": true
         }
       }
+    },
+    "order": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }
