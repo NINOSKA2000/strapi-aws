@@ -12,6 +12,10 @@ module.exports = ({ env }) => ({
           delete: {},
         },
       },
+      cache: {
+        enabled: true,
+        maxAge: 60000, // Cache durante 60 segundos
+      },
     },
   });
   

@@ -389,14 +389,14 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     autor: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<'Menagen Murriagui Hananel'>;
     autorRole: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<'Innovativa Seidor CEO'>;
@@ -435,7 +435,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 200;
+        maxLength: 210;
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;

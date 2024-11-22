@@ -18,8 +18,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
-      origin: ['http://localhost:3000', 'https://www.ariapp.ai','https://dev.ariapp.ai' ], // Cambia esto a los dominios permitidos
+      origin: ['http://localhost:3000', 'https://www.ariapp.ai', 'https://dev.ariapp.ai'], // Cambia esto a los dominios permitidos
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,

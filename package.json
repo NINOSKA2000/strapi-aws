@@ -11,15 +11,19 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.4.0",
+    "@strapi/plugin-cloud": "^5.3.0",
     "@strapi/plugin-users-permissions": "5.4.0",
     "@strapi/provider-upload-cloudinary": "^5.4.0",
     "@strapi/strapi": "5.4.0",
     "better-sqlite3": "11.3.0",
+    "glob": "^11.0.0",
     "mysql2": "^3.11.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "rimraf": "^6.0.1",
+    "strapi-middleware-cache": "^2.1.8",
+    "strapi-plugin-sentry": "^0.0.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

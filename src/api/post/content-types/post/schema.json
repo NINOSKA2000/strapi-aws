@@ -48,7 +48,7 @@
         }
       },
       "type": "text",
-      "maxLength": 200,
+      "maxLength": 210,
       "unique": false
     },
     "content": {
@@ -62,7 +62,7 @@
     "autor": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "string",
@@ -71,7 +71,7 @@
     "autorRole": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "string",
