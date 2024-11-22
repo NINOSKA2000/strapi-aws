@@ -16,7 +16,7 @@
     "@strapi/provider-upload-cloudinary": "^5.4.0",
     "@strapi/strapi": "5.4.0",
     "better-sqlite3": "11.3.0",
-    "glob": "^11.0.0",
+    "glob": "^8.1.0",
     "mysql2": "^3.11.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
