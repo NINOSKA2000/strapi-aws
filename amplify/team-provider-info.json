@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-strapiaws-dev-54c0e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::229509613164:role/amplify-strapiaws-dev-54c0e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::229509613164:role/amplify-strapiaws-dev-54c0e-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-strapiaws-dev-54c0e-deployment",
+      "UnauthRoleName": "amplify-strapiaws-dev-54c0e-unauthRole",
+      "StackName": "amplify-strapiaws-dev-54c0e",
+      "StackId": "arn:aws:cloudformation:us-east-1:229509613164:stack/amplify-strapiaws-dev-54c0e/d7b3dac0-ab4b-11ef-b012-0afff43b4ebf",
+      "AmplifyAppId": "d1m7l2kv3tuyce"
+    }
+  }
+}
