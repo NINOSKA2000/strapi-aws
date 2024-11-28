@@ -1,11 +1,11 @@
-version: "3.8"
-
 services:
   strapi:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: strapi
     ports:
-      - "1337:1337"  # Mapea el puerto 1337 del contenedor al 1337 de tu máquina local
+      - "1337:1337"
     environment:
       - HOST=0.0.0.0
       - PORT=1337
@@ -14,21 +14,16 @@ services:
       - ADMIN_JWT_SECRET=xAOMDFGYsV9ovieq7ZD02Q==
       - TRANSFER_TOKEN_SALT=zgi8qPo524XyWOYlkAXxCQ==
       - JWT_SECRET=+M7wRc36LKHJQ37OIGfZVw==
-      - CLOUDINARY_NAME=diwel1yye
-      - CLOUDINARY_API_KEY=124848985197925
-      - CLOUDINARY_API_SECRET=oEJr17hGPL7XqlvKCBtjTqj-JF4
       - DATABASE_CLIENT=mysql
-      - DATABASE_HOST=db  # Usar el nombre del servicio de la base de datos, 'db', definido en Docker Compose
+      - DATABASE_HOST=db
       - DATABASE_PORT=3306
       - DATABASE_NAME=blog-ari
       - DATABASE_USERNAME=bpaas_admin
       - DATABASE_PASSWORD=wSAGcjPxLQR0g6Bl
-      - DATABASE_SSL=false
-      - DATABASE_POOL_MIN=2
-      - DATABASE_POOL_MAX=10
-      - DATABASE_CONNECTION_TIMEOUT=60000
     volumes:
-      - ./strapi-app:/app
+      - .:/app
+    depends_on:
+      - db
     networks:
       - strapi-network
 

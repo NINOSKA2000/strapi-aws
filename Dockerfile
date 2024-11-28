@@ -1,31 +1,35 @@
-# Usar una imagen base de Node.js con Alpine
+# Usar una imagen base de Alpine
 FROM node:20-alpine
 
-# Establecer el directorio de trabajo dentro del contenedor
+# Instalar dependencias necesarias para construir sharp
+RUN apk add --no-cache \
+    build-base \
+    libc6-compat \
+    cairo-dev \
+    pango-dev \
+    jpeg-dev \
+    libpng-dev \
+    giflib-dev \
+    libwebp-dev \
+    vips-dev
+
+# Crear directorio de la aplicación
 WORKDIR /app
 
-# Copiar los archivos package.json y package-lock.json
-COPY package*.json ./
-
-# Instalar las dependencias necesarias para Strapi y Alpine
-RUN apk add --no-cache \
-  bash \
-  g++ \
-  make \
-  libmagic \
-  libpng-dev \
-  && npm install --production \
-  && rm -rf /var/cache/apk/*
-
-# Copiar el resto de los archivos del proyecto
+# Copiar archivos del proyecto
 COPY . .
 
-# Exponer el puerto 1337 para Strapi
+# Instalar dependencias
+RUN npm install
+
+# Compilar sharp para Alpine
+RUN npm rebuild sharp --platform=linuxmusl
+
+# Construir la aplicación
+RUN npm run build
+
+# Puerto de la aplicación
 EXPOSE 1337
 
-# Establecer las variables de entorno
-ENV HOST=0.0.0.0
-ENV PORT=1337
-
-# Iniciar Strapi en modo de producción
+# Iniciar Strapi
 CMD ["npm", "run", "start"]
